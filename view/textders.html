@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="tr_TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeliddinKutayKocak LMS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-uripath="" data-lang="ru">
+    <section class="sidebox">
+        <a class="logobox" href=""></a>
+        <div class="menubox mt-2">
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href='../index.html'><i class="fa fa-fw fa-home mr-1"></i>
+                            <div> Ana Sayfa </div>
+                        </a></li>
+                    <li class="has-sub"><a href=""><i class="fa fa-fw fa-graduation-cap mr-1"></i>
+                            <div> Derslerim</div>
+                        </a>
+                        <ul>
+                            <li><a href="yazili-derslerim.html">Yazılı Derslerim</a></li>
+                            <li><a href="yazili-derslerim.html">Videolu Derslerim</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#'><i class="fa fa-fw fa-pencil-square mr-1"></i>
+                            <div> Etütlerim</div>
+                        </a></li>
+                    <li><a href='odevlerim.html'><i class="fa fa-fw fa-eye mr-1"></i>
+                            <div> Ödevlerim</div>
+                        </a></li>
+                    <li class='has-sub'><a href='#'><i class="fa fa-fw fa-bars mr-1"></i>
+                            <div> Deneme Sınavları</div>
+                        </a>
+                        <ul>
+                            <li><a href="deneme-sinavi.html"> Tanımlı Sınavlarım</a></li>
+                            <li><a href=""> Deneme Havuzu</a></li>
+                            <li><a href=""> Sonuçlarım</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#'><i class="fa fa-fw fa-file-text mr-1"></i>
+                            <div> Online Sınavlarım</div>
+                        </a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-book mr-1"></i>
+                            <div> Çıkmış Sorular</div>
+                        </a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-drivers-license mr-1"></i>
+                            <div> Online Kütüphane</div>
+                        </a></li>
+                    <li><a href='favori-sorular.html'><i class="fa fa-fw fa-flag mr-1"></i>
+                            <div> Favori Sorular</div>
+                        </a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-users mr-1"></i>
+                            <div> Kulüplerim</div>
+                        </a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-user-plus mr-1"></i>
+                            <div> Online Rehberlik</div>
+                        </a></li>
+                    <li><a href='oyunlar.html'><i class="fa fa-fw fa-gamepad mr-1"></i>
+                            <div> Oyunlar</div>
+                        </a></li>
+                    <li><a href='cnf.html'><i class="fa fa-fw fa-video-camera mr-1"></i>
+                            <div> Örnek Konferans</div>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="contentbox">
+        <div class="titleBox">
+            <a href="" id="menubtn"><b class="fa fa-fw fa-bars"></b></a>
+            <div class="mr-2" id="groupbtnbox">
+                <a href="" id="logoutbtn"><b class="fa fa-power-off"></b></a>
+                <a href="" id="profilebtn">
+
+                    <img class=""
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEX+/v7U1NTR0dHV1dX8/Pz19fXe3t7l5eXy8vLZ2dno6Oj4+Pjh4eHv7+/b29vm5uYfWt7jAAAFoklEQVR4nO2d6XLrIAyFbcD7kvd/2wtO0jiusxh0zKGX71en0874jIQkxFYUmUwmk8lkMplMJpPJZDKZTCaTyWQOYWJ/wAmYYeqbsRktTT9Vf0uyafu6K5VS5Q37o+rGaYj9YTJUl3ktboUq5z55kVWjr+L0jkL7W1XWbexvDKC9y3uHUnOiGk3fKWu5fdttNNZV7K89zlSXV+t9odD+iZpif/AxBuudn4U927GP/dEHaOdl8H1hvCcrNrG/+1uq+aj57lZMRGKv1BHjrcyo1dzwVzpmCZ9+uP+z7t3VPbHKylfdGlvO0dY5bek5BLcaO1IrViLyFoljbC27DGICrUTKOi4gyPxGE/rpRWYM3iCs4gbPNPiKLragX8yi+uy8kW0ktqI+6mALp52sjzpiS3qmEjdhqbgKm/Fzs+KwQqoJo5H3UbK6Rj7OWHRsVWtGgMBSEZU1pkMoLInKGsma+wFTqIEMQ6q+TQ9RyFTVQAJNWdaxdT0QrroJFQLyPZdCgxmGTAoxAokiDSYdMtkQMHVa4LEhSuEltrAfQAqJqjbIONSKqKEo181/gqjbNoC8lGf3Aijj87SiDCrjE83xQQpjy1qBaWIwdaJqiEKmtZkREWoUT1kK6mIonqKtKCaIQp6iDVSYUimEpHyisrTApAsuhYB0oYnKUksj76ZkCgHBlEwhYP5EphCwBqy5Ig0gmGqqfAhRSNRMBM2BNdXmPcASqeYq2zATRKI2BqolzLPMDVoh5dlvglq3UDQjcRTePPtgji3tRi24v3sDSVN4RCmk2SjcYPQRVW6gDUMlT68GqJAkI0KaiVnhqbQogTQKUftpeCINaoXUQqIQtUJK1KtBzS14+m2Q9UOnkGYODGh5X6FZBoYlRJplYNgUmGYZGJUuWCZPBazXRhNopE8531E0gQY1EFlqtoVOvpGhibbuFQg31US5woGIpkSR1AEoa6hMWLhbMSQ1as13g8vQyVqxYRNo6Wd3EaKETqVqpjC6wrS9gL6S6gTwFoFNGZrybpoHAomfLEtsEdiUQVSN7hHesqGqRncIn0eRO6lEbUMdZ0TWoWJL+EB4U4o80AjsjmLZnfCK8Nk+25RiS/heWqYtibsEFzUkS4avCS1q2BP+/6AwtKhhL2nC76qh2Y/4ktCihj3hBxc1NOvarwlM+UyHf18RNEPkjzNFUPubZi/iB/yLb67LIN/gHWxm+kxxxzdjkLaB9/B7AIK+5l7hNYeiWhD9iE/KSCEVPvBZv2BvXzzjEU6TSRW2buvdI2THbah0V18mlt2IbzDeD81c35vjjzdN0CkozZ8zTOgxL/opcJgJHeRGlNhYw21EgZUZnl2le8jsjWI2osghL5aTMnsYoSeteI0odSxhZH09WGwjLW1DSu7+j47TiJJnSSmDzST4KhnNKe410nft0k2j5C9wYVrBGKbx8Ou4X8DyMnnbdPvPigugVHeJOyDNVFt1GnYtxiJSuadX4ySPofHqxxxkeWK2iRF3pvkEeXeUmk8OPEOPCC3vNXb9OXHHDYhqFJpDHBRZjuc4q3NPZGx5hQ1oZzjr+e65QWmos7b1idHltcgZlSMn4YM/vmgbdSb5BHlO8vsaVTayztrWUaLnO2ytI+aspidxzy1CzjrArvIKRws46xI9OS14y5DekdWZ37knq7oVtp7zc9aqiZzcv8c66/F6bpoX54xRnvlwtJ5r45TWYdjC/DoiP7qs88709C1nkL+ZfQxLcIH2JXDoz9PIZd6eov3WvB6SS+mSpvGecFlyb4pl+uSNt0b9urJg+lP63JH3TdO8/lP6ylsPcvwxo/SdFjR0t9EotfrOhis6F4mA5zeIMOYPjsEnauQduRSoCXFNFxUd7HpVGrLC9MkK0ycrTJ+sMH2ywvTJCtMnK0yfrDB9ssL0yQrTJytMHv0PUS5lBn4CYwQAAAAASUVORK5CYII="
+                        alt="">
+                    <div class="text">
+                        <b>Öğrenci İsmi</b>
+                        <small>11-A Sınıfı</small>
+                    </div>
+                    <div class="toogles">
+                        <span class="fa fw fa-angle-down"></span>
+                    </div>
+                    <div class="selectinbox" id="profilebtn-selbox">
+                        <div class="item">
+                            <span class="fa fa-fw fa-user mr-1"></span> Profilim
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-file-text mr-1"></span> Raporlarım
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-book mr-1"></span> Notlarım
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-grav mr-1"></span> Temalar
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-cog mr-1"></span> Ayarlarım
+                        </div>
+                    </div>
+                </a>
+                <a href="" id="messangebtn">
+                    <b class="fa fa-fw fa-envelope-o">
+                        <span class="count">+9</span>
+                    </b>
+                    <div class="text"><small>Mesajlarım</small></div>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="messangebtngrps-selbox">
+                        <div class="item">
+                            <h5>Mesaj 5</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Mesaj 4</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Mesaj 3</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Mesaj 2</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Mesaj 1</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" id="notifybtn">
+                    <b class="fa fa-fw fa-bell-o">
+                        <span class="count">+9</span>
+                    </b>
+                    <div class="text"><small>Bildirimlerim</small></div>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="notifybtngrps-selbox">
+                        <div class="item">
+                            <h5>Sistem Bildirimi 5</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Sistem Bildirimi 4</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Sistem Bildirimi 3</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Sistem Bildirimi 2</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Sistem Bildirimi 1</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a id="langbtngrps">
+                    <b class="flag-icon flag-icon-background "></b>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="langbtngrps-selbox">
+                        <div class="item" data-langtype="de">
+                            <span class="flag-icon flag-icon-background flag-icon-de"></span> Almanca
+                        </div>
+                        <div class="item" data-langtype="ar">
+                            <span class="flag-icon flag-icon-background flag-icon-ar"></span> Arapça
+                        </div>
+                        <div class="item" data-langtype="tr">
+                            <span class="flag-icon flag-icon-background flag-icon-tr"></span> Türkçe
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="nawbox">
+            <ul>
+                <li class='active'><a href=''>Ana Sayfa</a></li>
+                <li class='#'><a href=''>Yazılı Derslerim</a></li>
+
+            </ul>
+        </div>
+        <div class="mainbox ">
+            <div class="container-fluid resetPM p-2">
+                <div class="row ">
+                    <div class="col-lg-12 resetPM">
+                        <div class="card">
+                            <div class="card-header row">
+                                <div class="card-title col-8">
+                                    <h5><i class="fa fa-fw fa-graduation-cap"></i>Tarih -> Ünite Adı -> Konu Adı</h5>
+                                </div>
+                                <div class="card-element col-4" >
+                                    <a href="" id="cardofbtn2"><i class="fa fa-fw fa-plus" ></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body odevwg-body row">
+                                <div class="card-body-content p-2 col-12">
+                                    <div class="dersicerik" style="padding: 10px;">
+                                        <p><span style="font-size: 1rem;"><b><u>&nbsp;MOTORUN TANIMI:</u></b></span></p>
+                                        <p><span style="font-size: 1rem;">Yakıtı ısı enerjisine,ısı enerjisini de
+                                                hareket(mekanik)enerjisine&nbsp;</span><span style="font-size: 1rem;">çeviren
+                                                makinelerdir. Motorlar;yakıtın yanma yerlerine,&nbsp;</span><span
+                                                style="font-size: 1rem;">zamanlarına,kullanılan yakıtın cinsine,yağlama ve
+                                                soğutma&nbsp;</span><span style="font-size: 1rem;">sistemlerine göre
+                                                sınıflandırılırlar.</span></p>
+                                        <p><span style="font-size: 1rem;"><u>Yakıtın yanma yerleri:</u></span></p>
+                                        <p><span style="font-size: 1rem;"><b>1-</b> İçten yanmalı,</span></p>
+                                        <p><span style="font-size: 1rem;"><b>2-</b> Dıştan yanmalı Motorlar </span></p>
+                                        <p><span style="font-size: 1rem;">Çalışma zamanlarına göre: </span></p>
+                                        <p><span style="font-size: 1rem;"><u>İki zamanlı Motorlar:&nbsp;</u>Pistonun iki hareketinde
+                                                bir iş yaparlar. </span></p>
+                                        <p><span style="font-size: 1rem;"><u>Dört zamanlı Motorlar:</u> Pistonun dört hareketinde
+                                                bir iş yaparlar.</span></p>
+                                        <p><span style="font-size: 1rem;"><u> Yakıt cinslerine göre Motorlar: </u>BENZİNLİ-DİZEL-LPG
+                                                olarak ayrılır. </span></p>
+                                        <p><span style="font-size: 1rem;"><u>Soğutma sistemleri:</u> Su soğutmalı ve Hava soğutmalı
+                                                motorlardır.&nbsp;&nbsp;</span><br></p>
+                                        <p><b>DÖRT ZAMANLI BENZİNLİ MOTORLARDA ZAMANLAR</b>: </p>
+                                        <p>EMME ZAMANI-SIKIŞTIRMA ZAMANI-ATEŞLEME ZAMANI-EGZOZ ZAMANI&nbsp; &nbsp;</p>
+                                        <p><img src="data:image/png;base64,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"
+                                                data-filename="image.png" style="width: 50%;"><br></p>
+                                        <p><b>DÖRT ZAMANLI DİZEL MOTORLARDA ZAMANLAR:</b></p>
+                                        <p> EMME ZAMANI-SIKIŞTIRMA ZAMANI-YANMA ZAMANI-EGZOZ ZAMANI&nbsp;&nbsp;</p>
+                                        <p><b>ATEŞLEME SİSTEMİ İLE İLGİLİ ÖNEMLİ NOTLAR </b></p>
+                                        <p><b>1-</b> Platin meme&nbsp;<span style="font-size: 1rem;">yaparsa meksefe arızalıdır.(
+                                                otomobillerde, buji uçlarındaki&nbsp;</span><span style="font-size: 1rem;">yüksek
+                                                gerilim atlamasının elektron alışverişi yanında kaynaklanma</span></p>
+                                        <p> (meme oluşumu) yapmaması için kullanılır ve atlama davranışını&nbsp;<span
+                                                style="font-size: 1rem;">"ani" değil, "dengelenme" şekline sokarlar. bu amaçla
+                                                kullanılan</span></p>
+                                        <p> kondansatörlere meksefe adı verilir.) </p>
+                                        <p><b>2- </b>Platin meme yaparsa zımpara ile temizlenir. </p>
+                                        <p><b>3- </b>Kontak anahtarı ateşleme durumunda açık bırakılırsa platin&nbsp;<span
+                                                style="font-size: 1rem;">ve endüksiyon bobini yanabilir.</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer row">
+                                <div class="card-title col-12">
+                                    <h5><i class="fa fa-fw fa-download"></i>Konu Eki</h5>
+                                </div>
+                                <div class="card-content col-12">
+                                    <div class="row">
+                                        <div class="document col-lg-2 col-md-3 col-xs-6 p-2">
+                                            <i class="fa fa-fw fa-file-text" aria-hidden="true"></i>
+                                            <p>Döküman Adı</p>
+                                            <a href="">İndir</a>
+                                        </div>
+                                        <div class="document col-lg-2 col-md-3 col-xs-6 p-2">
+                                            <i class="fa fa-fw fa-file-text" aria-hidden="true"></i>
+                                            <p>Döküman Adı</p>
+                                            <a href="">İndir</a>
+                                        </div>
+                                        <div class="document col-lg-2 col-md-3 col-xs-6 p-2">
+                                            <i class="fa fa-fw fa-file-text" aria-hidden="true"></i>
+                                            <p>Döküman Adı</p>
+                                            <a href="">İndir</a>
+                                        </div>
+                                        <div class="document col-lg-2 col-md-3 col-xs-6 p-2">
+                                            <i class="fa fa-fw fa-file-text" aria-hidden="true"></i>
+                                            <p>Döküman Adı</p>
+                                            <a href="">İndir</a>
+                                        </div>
+                                        <div class="document col-lg-2 col-md-3 col-xs-6 p-2">
+                                            <i class="fa fa-fw fa-file-text" aria-hidden="true"></i>
+                                            <p>Döküman Adı</p>
+                                            <a href="">İndir</a>
+                                        </div>
+                                        <div class="document col-lg-2 col-md-3 col-xs-6 p-2">
+                                            <i class="fa fa-fw fa-file-text" aria-hidden="true"></i>
+                                            <p>Döküman Adı</p>
+                                            <a href="">İndir</a>
+                                        </div>
+                                    </div>    
+                                </div>
+
+                                
+                            </div>
+                        </div> 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+
+</html>

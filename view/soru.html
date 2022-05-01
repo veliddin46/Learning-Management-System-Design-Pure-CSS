@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="tr_TR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeliddinKutayKocak LMS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-uripath="" data-lang="ru">
+    <section class="sidebox">
+        <a class="logobox"  href=""></a>
+        <div class="menubox mt-2">
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href='../index.html'><i class="fa fa-fw fa-home mr-1"></i> <div> Ana Sayfa </div></a></li>
+                    <li class="has-sub"><a href=""><i class="fa fa-fw fa-graduation-cap mr-1"></i><div> Derslerim</div></a>
+                        <ul>
+                            <li><a href="yazili-derslerim.html">Yazılı Derslerim</a></li>
+                            <li><a href="yazili-derslerim.html">Videolu Derslerim</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#'><i class="fa fa-fw fa-pencil-square mr-1"></i><div> Etütlerim</div></a></li>
+                    <li><a href='odevlerim.html'><i class="fa fa-fw fa-eye mr-1"></i><div> Ödevlerim</div></a></li>
+                    <li class='has-sub'><a href='#'><i class="fa fa-fw fa-bars mr-1"></i> <div> Deneme Sınavları</div></a>
+                        <ul>
+                            <li><a href="deneme-sinavi.html"> Tanımlı Sınavlarım</a></li>
+                            <li><a href=""> Deneme Havuzu</a></li>
+                            <li><a href=""> Sonuçlarım</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#'><i class="fa fa-fw fa-file-text mr-1"></i><div > Online Sınavlarım</div></a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-book mr-1"></i><div> Çıkmış Sorular</div></a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-drivers-license mr-1"></i><div> Online Kütüphane</div></a></li>
+                    <li><a href='favori-sorular.html'><i class="fa fa-fw fa-flag mr-1"></i><div> Favori Sorular</div></a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-users mr-1"></i><div> Kulüplerim</div></a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-user-plus mr-1"></i><div> Online Rehberlik</div></a></li>
+                    <li><a href='oyunlar.html'><i class="fa fa-fw fa-gamepad mr-1"></i><div> Oyunlar</div></a></li>
+                    <li><a href='cnf.html'><i class="fa fa-fw fa-video-camera mr-1"></i><div> Örnek Konferans</div></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="contentbox">
+        <div class="titleBox">
+            <a href="" id="menubtn"><b class="fa fa-fw fa-bars"></b></a>
+            <div class="mr-2" id="groupbtnbox">
+                <a href="" id="logoutbtn"><b class="fa fa-power-off"></b></a>
+                <a href="" id="profilebtn">
+                    
+                    <img class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEX+/v7U1NTR0dHV1dX8/Pz19fXe3t7l5eXy8vLZ2dno6Oj4+Pjh4eHv7+/b29vm5uYfWt7jAAAFoklEQVR4nO2d6XLrIAyFbcD7kvd/2wtO0jiusxh0zKGX71en0874jIQkxFYUmUwmk8lkMplMJpPJZDKZTCaTyWQOYWJ/wAmYYeqbsRktTT9Vf0uyafu6K5VS5Q37o+rGaYj9YTJUl3ktboUq5z55kVWjr+L0jkL7W1XWbexvDKC9y3uHUnOiGk3fKWu5fdttNNZV7K89zlSXV+t9odD+iZpif/AxBuudn4U927GP/dEHaOdl8H1hvCcrNrG/+1uq+aj57lZMRGKv1BHjrcyo1dzwVzpmCZ9+uP+z7t3VPbHKylfdGlvO0dY5bek5BLcaO1IrViLyFoljbC27DGICrUTKOi4gyPxGE/rpRWYM3iCs4gbPNPiKLragX8yi+uy8kW0ktqI+6mALp52sjzpiS3qmEjdhqbgKm/Fzs+KwQqoJo5H3UbK6Rj7OWHRsVWtGgMBSEZU1pkMoLInKGsma+wFTqIEMQ6q+TQ9RyFTVQAJNWdaxdT0QrroJFQLyPZdCgxmGTAoxAokiDSYdMtkQMHVa4LEhSuEltrAfQAqJqjbIONSKqKEo181/gqjbNoC8lGf3Aijj87SiDCrjE83xQQpjy1qBaWIwdaJqiEKmtZkREWoUT1kK6mIonqKtKCaIQp6iDVSYUimEpHyisrTApAsuhYB0oYnKUksj76ZkCgHBlEwhYP5EphCwBqy5Ig0gmGqqfAhRSNRMBM2BNdXmPcASqeYq2zATRKI2BqolzLPMDVoh5dlvglq3UDQjcRTePPtgji3tRi24v3sDSVN4RCmk2SjcYPQRVW6gDUMlT68GqJAkI0KaiVnhqbQogTQKUftpeCINaoXUQqIQtUJK1KtBzS14+m2Q9UOnkGYODGh5X6FZBoYlRJplYNgUmGYZGJUuWCZPBazXRhNopE8531E0gQY1EFlqtoVOvpGhibbuFQg31US5woGIpkSR1AEoa6hMWLhbMSQ1as13g8vQyVqxYRNo6Wd3EaKETqVqpjC6wrS9gL6S6gTwFoFNGZrybpoHAomfLEtsEdiUQVSN7hHesqGqRncIn0eRO6lEbUMdZ0TWoWJL+EB4U4o80AjsjmLZnfCK8Nk+25RiS/heWqYtibsEFzUkS4avCS1q2BP+/6AwtKhhL2nC76qh2Y/4ktCihj3hBxc1NOvarwlM+UyHf18RNEPkjzNFUPubZi/iB/yLb67LIN/gHWxm+kxxxzdjkLaB9/B7AIK+5l7hNYeiWhD9iE/KSCEVPvBZv2BvXzzjEU6TSRW2buvdI2THbah0V18mlt2IbzDeD81c35vjjzdN0CkozZ8zTOgxL/opcJgJHeRGlNhYw21EgZUZnl2le8jsjWI2osghL5aTMnsYoSeteI0odSxhZH09WGwjLW1DSu7+j47TiJJnSSmDzST4KhnNKe410nft0k2j5C9wYVrBGKbx8Ou4X8DyMnnbdPvPigugVHeJOyDNVFt1GnYtxiJSuadX4ySPofHqxxxkeWK2iRF3pvkEeXeUmk8OPEOPCC3vNXb9OXHHDYhqFJpDHBRZjuc4q3NPZGx5hQ1oZzjr+e65QWmos7b1idHltcgZlSMn4YM/vmgbdSb5BHlO8vsaVTayztrWUaLnO2ytI+aspidxzy1CzjrArvIKRws46xI9OS14y5DekdWZ37knq7oVtp7zc9aqiZzcv8c66/F6bpoX54xRnvlwtJ5r45TWYdjC/DoiP7qs88709C1nkL+ZfQxLcIH2JXDoz9PIZd6eov3WvB6SS+mSpvGecFlyb4pl+uSNt0b9urJg+lP63JH3TdO8/lP6ylsPcvwxo/SdFjR0t9EotfrOhis6F4mA5zeIMOYPjsEnauQduRSoCXFNFxUd7HpVGrLC9MkK0ycrTJ+sMH2ywvTJCtMnK0yfrDB9ssL0yQrTJytMHv0PUS5lBn4CYwQAAAAASUVORK5CYII=" alt="">
+                    <div class="text">
+                        <b>Öğrenci İsmi</b>
+                        <small>11-A Sınıfı</small>
+                    </div>
+                    <div class="toogles">
+                        <span class="fa fw fa-angle-down"></span>
+                    </div>
+                    <div class="selectinbox" id="profilebtn-selbox">
+                        <div class="item">
+                            <span class="fa fa-fw fa-user mr-1"></span> Profilim
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-file-text mr-1"></span> Raporlarım
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-book mr-1"></span> Notlarım
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-grav mr-1"></span> Temalar
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-cog mr-1"></span> Ayarlarım
+                        </div>
+                    </div>
+                </a>
+                <a href="" id="messangebtn">
+                    <b class="fa fa-fw fa-envelope-o">
+                        <span class="count">+9</span>
+                    </b>
+                    <div class="text"><small>Mesajlarım</small></div>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="messangebtngrps-selbox">
+                        <div class="item" >
+                            <h5>Mesaj 5</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Mesaj 4</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Mesaj 3</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Mesaj 2</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Mesaj 1</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" id="notifybtn">
+                    <b class="fa fa-fw fa-bell-o">
+                        <span class="count">+9</span>
+                    </b>
+                    <div class="text"><small>Bildirimlerim</small></div>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="notifybtngrps-selbox">
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 5</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 4</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 3</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 2</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 1</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a id="langbtngrps">
+                    <b class="flag-icon flag-icon-background "></b>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="langbtngrps-selbox">
+                        <div class="item" data-langtype="de">
+                            <span class="flag-icon flag-icon-background flag-icon-de"></span> Almanca
+                        </div>
+                        <div class="item" data-langtype="ar">
+                            <span class="flag-icon flag-icon-background flag-icon-ar"></span> Arapça
+                        </div>
+                        <div class="item" data-langtype="tr">
+                            <span class="flag-icon flag-icon-background flag-icon-tr"></span> Türkçe
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="nawbox">
+            <ul>
+                <li class='active'><a href=''>Ana Sayfa</a></li>
+                <li class='#'><a href=''>Test</a></li>
+            </ul>
+        </div>
+        <div class="mainbox">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 p-2">
+                        <div class="card">
+                            <div class="card-header row">
+                                <div class="card-title col-lg-8 col-md-6">
+                                    <h5><i class="fa fa-fw fa-file-text"></i>Tarih - Test</h5>
+                                </div>
+                                <div class="card-element col-lg-4 col-md-6" >
+                                  <p><b>Toplam Süre:</b> 60.00</p>
+                                  <p><b>Kalan Süre:</b> 38.27</p>
+                                </div>
+                            </div>
+                            <div class="card-body row">
+                                <div class="card-body-content  col-12">
+                                    <div class="row">
+                                        <div class="col-lg-9 col-md-8 col-sm-12 resetPM">
+                                          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+                                            <ol class="carousel-indicators">
+                                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                            </ol>
+                                            <div class="inclusive-carousel-inner">
+                                              <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                  <form action="">
+                                                    <fieldset id="group1" data-dogrucevap="sinavcevapd" class="shadow-sm" >
+                                                      <b>Soru 1) <p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">I- İlk Yardım Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">II- Trafik ve Çevre Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">III- Motor ve Araç Tekniği Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">IV- Trafik Adabı</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">Yukarıdakilerden hangileri, sürücü adaylarına sürücü kurslarında okutulan derslerdendir?</p></b>
+                                                      <ul class="alignment-menu soruul" >
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru1a" name="soru1" value="soru1a">
+                                                          <label class="sorusik" data-elemno="soru1a" data-soruno="1" data-sik="a" data-tooptik="soru1aoptik" for="soru1a">
+                                                            A
+                                                          </label>
+                                                          <p>Yalnız I </p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru1b" name="soru1" value="soru1b">
+                                                          <label class="sorusik" data-elemno="soru1b" data-soruno="1" data-sik="b" data-tooptik="soru1boptik" for="soru1b">
+                                                          B
+                                                          </label>
+                                                          <p>I - II</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input class="sorusik" type="radio" id="soru1c" name="soru1" value="soru1c">
+                                                          <label class="sorusik" data-elemno="soru1c" data-soruno="1" data-sik="c" data-tooptik="soru1coptik" for="soru1c">
+                                                          C
+                                                          </label>
+                                                          <p>II - III - IV ı</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru1d" name="soru1" value="soru1d">
+                                                            <label class="sorusik" data-elemno="soru1d" data-soruno="1" data-sik="d" data-tooptik="soru1doptik" for="soru1d">
+                                                            D
+                                                            </label>
+                                                            <p>I - II - III - IV</p>
+                                                          </li> 
+                                                          <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru1e" name="soru1" value="soru1e">
+                                                            <label class="sorusik" data-elemno="soru1e" data-soruno="1" data-sik="e" data-tooptik="soru1eoptik" for="soru1e">
+                                                            E
+                                                            </label>
+                                                            <p>Yalnız II </p>
+                                                          </li>
+                                                      </ul>
+                                                      
+                                                      </fieldset>
+                                                  </form>
+                                                </div>
+                                                <div class="carousel-item">
+                                                  <form action="">
+                                                    <fieldset id="group2" data-dogrucevap="sinavcevapd" class="sorubox shadow-sm" >
+                                                      <b>Soru 2) <p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">I- İlk Yardım Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">II- Trafik ve Çevre Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">III- Motor ve Araç Tekniği Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">IV- Trafik Adabı</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">Yukarıdakilerden hangileri, sürücü adaylarına sürücü kurslarında okutulan derslerdendir?</p></b>
+                                                      <ul class="alignment-menu soruul">
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru2a" name="soru2" value="soru2a">
+                                                          <label class="sorusik" data-elemno="soru2a" data-soruno="2" data-sik="a" data-tooptik="soru2aoptik" for="soru2a">
+                                                            A
+                                                          </label>
+                                                          <p>Yalnız I </p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru2b" name="soru2" value="soru2b">
+                                                          <label class="sorusik" data-elemno="soru2b" data-soruno="2" data-sik="b" data-tooptik="soru2boptik" for="soru2b">
+                                                          B
+                                                          </label>
+                                                          <p>I - II</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input class="sorusik" type="radio" id="soru2c" name="soru2" value="soru1c" >
+                                                          <label class="sorusik" data-elemno="soru2c" data-soruno="2" data-sik="c" data-tooptik="soru2coptik" for="soru2c">
+                                                          C
+                                                          </label>
+                                                          <p>II - III - IV ı</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru2d" name="soru2" value="soru1d">
+                                                            <label class="sorusik" data-elemno="soru2d" data-soruno="2" data-sik="d" data-tooptik="soru2doptik" for="soru2d">
+                                                            D
+                                                            </label>
+                                                            <p>I - II - III - IV</p>
+                                                          </li> 
+                                                          <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru2e" name="soru2" value="soru1e">
+                                                            <label class="sorusik" data-elemno="soru2e" data-soruno="2" data-sik="e" data-tooptik="soru2eoptik" for="soru2e">
+                                                            E
+                                                            </label>
+                                                            <p>Yalnız II </p>
+                                                          </li>
+                                                      </ul>
+                                                    </fieldset>
+                                                  </form>
+                                                </div>
+                                                <div class="carousel-item">
+                                                  <form action="">
+                                                    <fieldset id="group3" data-dogrucevap="sinavcevapd" class="sorubox shadow-sm" target="3">
+                                                      <b>Soru 3) <p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">I- İlk Yardım Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">II- Trafik ve Çevre Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">III- Motor ve Araç Tekniği Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">IV- Trafik Adabı</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">Yukarıdakilerden hangileri, sürücü adaylarına sürücü kurslarında okutulan derslerdendir?</p></b>
+                                                      <ul class="alignment-menu soruul">
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru3a" name="soru3" value="soru3a">
+                                                          <label class="sorusik" data-elemno="soru3a" data-soruno="3" data-sik="a" data-tooptik="soru3aoptik" for="soru3a">
+                                                            A
+                                                          </label>
+                                                          <p>Yalnız I </p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru3b" name="soru3" value="soru3b">
+                                                          <label class="sorusik" data-elemno="soru3b" data-soruno="3" data-sik="b" data-tooptik="soru3boptik" for="soru3b">
+                                                          B
+                                                          </label>
+                                                          <p>I - II</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input class="sorusik" type="radio" id="soru3c" name="soru3" value="soru3c" >
+                                                          <label class="sorusik" data-elemno="soru3c" data-soruno="3" data-sik="c" data-tooptik="soru3coptik" for="soru3c">
+                                                          C
+                                                          </label>
+                                                          <p>II - III - IV ı</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru3d" name="soru3" value="soru3d">
+                                                            <label class="sorusik" data-elemno="soru3d" data-soruno="3" data-sik="d" data-tooptik="soru3doptik" for="soru3d">
+                                                            D
+                                                            </label>
+                                                            <p>I - II - III - IV</p>
+                                                          </li> 
+                                                          <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru3e" name="soru3" value="soru3e">
+                                                            <label class="sorusik" data-elemno="soru3e" data-soruno="3" data-sik="e" data-tooptik="soru3eoptik" for="soru3e">
+                                                            E
+                                                            </label>
+                                                            <p>Yalnız II </p>
+                                                          </li>
+                                                      </ul>
+                                                    </fieldset>
+                                                  </form>
+                                                </div>
+                                                <div class="carousel-item">
+                                                  <form action="">
+                                                    <fieldset id="group4" data-dogrucevap="sinavcevapd" class="sorubox shadow-sm" target="4">
+                                                      <b>Soru 4) <p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">I- İlk Yardım Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">II- Trafik ve Çevre Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">III- Motor ve Araç Tekniği Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">IV- Trafik Adabı</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">Yukarıdakilerden hangileri, sürücü adaylarına sürücü kurslarında okutulan derslerdendir?</p></b>
+                                                      <ul class="alignment-menu soruul">
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru4a" name="soru4" value="soru4a">
+                                                          <label class="sorusik" data-elemno="soru4a" data-soruno="4" data-sik="a" data-tooptik="soru4aoptik" for="soru4a">
+                                                            A
+                                                          </label>
+                                                          <p>Yalnız I </p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru4b" name="soru4" value="soru4b">
+                                                          <label class="sorusik" data-elemno="soru4b" data-soruno="4" data-sik="b" data-tooptik="soru4boptik" for="soru4b">
+                                                          B
+                                                          </label>
+                                                          <p>I - II</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input class="sorusik" type="radio" id="soru4c" name="soru4" value="soru4c" >
+                                                          <label class="sorusik" data-elemno="soru4c" data-soruno="4" data-sik="c" data-tooptik="soru4coptik" for="soru4c">
+                                                          C
+                                                          </label>
+                                                          <p>II - III - IV ı</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru4d" name="soru4" value="soru4d">
+                                                            <label class="sorusik" data-elemno="soru4d" data-soruno="4" data-sik="d" data-tooptik="soru4doptik" for="soru4d">
+                                                            D
+                                                            </label>
+                                                            <p>I - II - III - IV</p>
+                                                          </li> 
+                                                          <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru4e" name="soru4" value="soru4e">
+                                                            <label class="sorusik" data-elemno="soru4e" data-soruno="4" data-sik="e" data-tooptik="soru4eoptik" for="soru4e">
+                                                            E
+                                                            </label>
+                                                            <p>Yalnız II </p>
+                                                          </li>
+                                                      </ul>
+                                                    </fieldset>
+                                                  </form>
+                                                </div>
+                                                <div class="carousel-item">
+                                                  <form action="">
+                                                    <fieldset id="group5" data-dogrucevap="sinavcevapd" class="sorubox shadow-sm" target="5">
+                                                      <b>Soru 5) <p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">I- İlk Yardım Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">II- Trafik ve Çevre Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">III- Motor ve Araç Tekniği Bilgisi</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">IV- Trafik Adabı</p><p style="margin-right: 0px; margin-bottom: 10px; margin-left: 0px; overflow-wrap: break-word;" arial="" unicode="" ms",="" helvetica,="" sans-serif;"="">Yukarıdakilerden hangileri, sürücü adaylarına sürücü kurslarında okutulan derslerdendir?</p></b>
+                                                      <ul class="alignment-menu soruul">
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru5a" name="soru5" value="soru5a">
+                                                          <label class="sorusik" data-elemno="soru5a" data-soruno="5" data-sik="a" data-tooptik="soru5aoptik" for="soru5a">
+                                                            A
+                                                          </label>
+                                                          <p>Yalnız I </p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input type="radio" id="soru5b" name="soru5" value="soru5b">
+                                                          <label class="sorusik" data-elemno="soru5b" data-soruno="5" data-sik="b" data-tooptik="soru5boptik" for="soru5b">
+                                                          B
+                                                          </label>
+                                                          <p>I - II</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                          <input class="sorusik" type="radio" id="soru5c" name="soru5" value="soru5c" >
+                                                          <label class="sorusik" data-elemno="soru5c" data-soruno="5" data-sik="c" data-tooptik="soru5coptik" for="soru5c">
+                                                          C
+                                                          </label>
+                                                          <p>II - III - IV ı</p>
+                                                        </li>
+                                                        <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru5d" name="soru5" value="soru5d">
+                                                            <label class="sorusik" data-elemno="soru5d" data-soruno="5" data-sik="d" data-tooptik="soru5doptik" for="soru5d">
+                                                            D
+                                                            </label>
+                                                            <p>I - II - III - IV</p>
+                                                          </li> 
+                                                          <li class="alignment-menu-item soruli">
+                                                            <input class="sorusik" type="radio" id="soru5e" name="soru5" value="soru5e">
+                                                            <label class="sorusik" data-elemno="soru5e" data-soruno="5" data-sik="e" data-tooptik="soru5eoptik" for="soru5e">
+                                                            E
+                                                            </label>
+                                                            <p>Yalnız II </p>
+                                                          </li>
+                                                      </ul>
+                                                    </fieldset>
+                                                  </form>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        <div class="row carousel-footer">
+                                          <div class="col-lg-12" style="display: flex; flex-direction: row; align-items: center; justify-content: center;"> 
+                                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" >
+                                              <span class="carousel-control-prev-icon" aria-hidden="true" style="background: none;"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                                              <span class="sr-only">Previous</span>
+                                            </a>
+                                            <h5 id="sorusirasi"> 1 / 2 </h5> 
+                                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"  >
+                                              <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                                              <span class="sr-only">Next</span>
+                                            </a>
+                                            <div id="sinavbitir"><b><a href="">Sınavı Bitir</a></b></div>
+                                          </div>
+                                        </div>
+                                        
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 optik resetPM">
+                                      
+                                            <div class="row p-2 active" id="soru1optiksatir" data="1" target="1">
+                                            <ul class="alignment-menu">
+                                                <li class="alignment-menu-item">
+                                                   <h5>1)</h5>
+                                                  </li>
+                                                <li class="alignment-menu-item">
+                                                  <input class="sorucheck" type="radio" data-soruoptikno="1" id="soru1aoptik" name="optiksoru1" value="a" target="1">
+                                                  <label for="soru1a">
+                                                    A
+                                                  </label>
+                                                </li>
+                                                <li class="alignment-menu-item">
+                                                  <input class="sorucheck" type="radio" data-soruoptikno="1" id="soru1boptik" name="optiksoru1" value="b" target="2">
+                                                  <label for="soru1b">
+                                                   B
+                                                  </label>
+                                                </li>
+                                                <li class="alignment-menu-item">
+                                                  <input class="sorucheck" type="radio" data-soruoptikno="1" id="soru1coptik" name="optiksoru1" value="c" target="3">
+                                                  <label for="soru1c">
+                                                  C
+                                                  </label>
+                                                </li>
+                                                <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" data-soruoptikno="1" id="soru1doptik" name="optiksoru1" value="d" target="4">
+                                                    <label for="soru1d">
+                                                    D
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" data-soruoptikno="1" id="soru1eoptik" name="optiksoru1" value="e" target="5">
+                                                    <label for="soru1e">
+                                                    E
+                                                    </label>
+                                                  </li>
+                                                  
+                                              </ul>
+                                            </div>
+                                            <div class="row p-2" id="soru2optiksatir" data="2" target="2">
+                                              <ul class="alignment-menu">
+                                                <li class="alignment-menu-item">
+                                                   <h5>2)</h5>
+                                                  </li>
+                                                <li class="alignment-menu-item">
+                                                  <input class="sorucheck" type="radio" data-soruoptikno="2" id="soru2aoptik" name="optiksoru2" value="a" target="1">
+                                                  <label for="soru2a">
+                                                    A
+                                                  </label>
+                                                </li>
+                                                <li class="alignment-menu-item">
+                                                  <input class="sorucheck" type="radio" data-soruoptikno="2" id="soru2boptik" name="optiksoru2" value="b" target="2">
+                                                  <label for="soru2b">
+                                                   B
+                                                  </label>
+                                                </li>
+                                                <li class="alignment-menu-item">
+                                                  <input class="sorucheck" type="radio" data-soruoptikno="2" id="soru2coptik" name="optiksoru2" value="c" target="3">
+                                                  <label for="soru2c">
+                                                  C
+                                                  </label>
+                                                </li>
+                                                <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" data-soruoptikno="2" id="soru2doptik" name="optiksoru2" value="d" target="4">
+                                                    <label for="soru2d">
+                                                    D
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" data-soruoptikno="2" id="soru2eoptik" name="optiksoru2" value="e" target="5">
+                                                    <label for="soru2e">
+                                                    E
+                                                    </label>
+                                                  </li>
+                                              </ul>
+                                            </div>
+                                            <div class="row p-2" id="soru3optiksatir" data="3" target="3">
+                                              <ul class="alignment-menu">
+                                                  <li class="alignment-menu-item">
+                                                      <h5>3)</h5>
+                                                    </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" id="soru3aoptik" name="optiksoru3" value="a">
+                                                    <label for="soru3aoptik">
+                                                      A
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" id="soru3boptik" name="optiksoru3" value="b">
+                                                    <label for="soru3boptik">
+                                                     B
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" id="soru3coptik" name="optiksoru3" value="c">
+                                                    <label for="soru3coptik">
+                                                    C
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                      <input class="sorucheck" type="radio" id="soru3doptik" name="optiksoru3" value="d">
+                                                      <label for="soru3doptik">
+                                                      D
+                                                      </label>
+                                                    </li>
+                                                    <li class="alignment-menu-item">
+                                                      <input class="sorucheck" type="radio" id="soru3eoptik" name="optiksoru3" value="e">
+                                                      <label for="soru3eoptik">
+                                                      E
+                                                      </label>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                            <div class="row p-2" id="soru4optiksatir" data="4" target="4">
+                                              <ul class="alignment-menu">
+                                                  <li class="alignment-menu-item">
+                                                      <h5>4)</h5>
+                                                    </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" id="soru4aoptik" name="optiksoru4" value="a">
+                                                    <label for="soru4aoptik">
+                                                      A
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" id="soru4boptik" name="optiksoru4" value="b">
+                                                    <label for="soru4boptik">
+                                                     B
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" id="soru4coptik" name="optiksoru4" value="c">
+                                                    <label for="soru4coptik">
+                                                    C
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                      <input class="sorucheck" type="radio" id="soru4doptik" name="optiksoru4" value="d">
+                                                      <label for="soru4doptik">
+                                                      D
+                                                      </label>
+                                                    </li>
+                                                    <li class="alignment-menu-item">
+                                                      <input class="sorucheck" type="radio" id="soru4eoptik" name="optiksoru4" value="e">
+                                                      <label for="soru4eoptik">
+                                                      E
+                                                      </label>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                            <div class="row p-2" id="soru5optiksatir" data="5" target="5">
+                                              <ul class="alignment-menu">
+                                                  <li class="alignment-menu-item">
+                                                      <h5>5)</h5>
+                                                    </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" id="soru5aoptik" name="optiksoru5" value="a">
+                                                    <label for="soru5aoptik">
+                                                      A
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" id="soru5boptik" name="optiksoru5" value="b">
+                                                    <label for="soru5boptik">
+                                                     B
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                    <input class="sorucheck" type="radio" id="soru5coptik" name="optiksoru5" value="c">
+                                                    <label for="soru5coptik">
+                                                    C
+                                                    </label>
+                                                  </li>
+                                                  <li class="alignment-menu-item">
+                                                      <input class="sorucheck" type="radio" id="soru5doptik" name="optiksoru5" value="d">
+                                                      <label for="soru5doptik">
+                                                      D
+                                                      </label>
+                                                    </li>
+                                                    <li class="alignment-menu-item">
+                                                      <input class="sorucheck" type="radio" id="soru5eoptik" name="optiksoru5" value="e">
+                                                      <label for="soru5eoptik">
+                                                      E
+                                                      </label>
+                                                    </li>
+                                                </ul>
+                                            </div>  
+                                        </div>
+
+                                    </div>  
+                                  </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>  
+            </div>            
+        </div>  
+    </div>         
+    </section>
+    <style type="text/css">
+        
+  
+      </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>

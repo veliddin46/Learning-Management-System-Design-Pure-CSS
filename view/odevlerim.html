@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="tr_TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeliddinKutayKocak LMS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-uripath="" data-lang="ru">
+    <section class="sidebox">
+        <a class="logobox" href=""></a>
+        <div class="menubox mt-2">
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href='../index.html'><i class="fa fa-fw fa-home mr-1"></i>
+                            <div> Ana Sayfa </div>
+                        </a></li>
+                    <li class="has-sub"><a href=""><i class="fa fa-fw fa-graduation-cap mr-1"></i>
+                            <div> Derslerim</div>
+                        </a>
+                        <ul>
+                            <li><a href="yazili-derslerim.html">Yazılı Derslerim</a></li>
+                            <li><a href="yazili-derslerim.html">Videolu Derslerim</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#'><i class="fa fa-fw fa-pencil-square mr-1"></i>
+                            <div> Etütlerim</div>
+                        </a></li>
+                    <li><a href='odevlerim.html'><i class="fa fa-fw fa-eye mr-1"></i>
+                            <div> Ödevlerim</div>
+                        </a></li>
+                    <li class='has-sub'><a href='#'><i class="fa fa-fw fa-bars mr-1"></i>
+                            <div> Deneme Sınavları</div>
+                        </a>
+                        <ul>
+                            <li><a href="deneme-sinavi.html"> Tanımlı Sınavlarım</a></li>
+                            <li><a href=""> Deneme Havuzu</a></li>
+                            <li><a href=""> Sonuçlarım</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#'><i class="fa fa-fw fa-file-text mr-1"></i>
+                            <div> Online Sınavlarım</div>
+                        </a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-book mr-1"></i>
+                            <div> Çıkmış Sorular</div>
+                        </a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-drivers-license mr-1"></i>
+                            <div> Online Kütüphane</div>
+                        </a></li>
+                    <li><a href='favori-sorular.html'><i class="fa fa-fw fa-flag mr-1"></i>
+                            <div> Favori Sorular</div>
+                        </a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-users mr-1"></i>
+                            <div> Kulüplerim</div>
+                        </a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-user-plus mr-1"></i>
+                            <div> Online Rehberlik</div>
+                        </a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-gamepad mr-1"></i>
+                            <div> Oyunlar</div>
+                        </a></li>
+                    <li><a href='cnf.html'><i class="fa fa-fw fa-video-camera mr-1"></i>
+                            <div> Örnek Konferans</div>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="contentbox">
+        <div class="titleBox">
+            <a href="" id="menubtn"><b class="fa fa-fw fa-bars"></b></a>
+            <div class="mr-2" id="groupbtnbox">
+                <a href="" id="logoutbtn"><b class="fa fa-power-off"></b></a>
+                <a href="" id="profilebtn">
+
+                    <img class=""
+                        src="data:image/png;base64,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"
+                        alt="">
+                    <div class="text">
+                        <b>Öğrenci İsmi</b>
+                        <small>11-A Sınıfı</small>
+                    </div>
+                    <div class="toogles">
+                        <span class="fa fw fa-angle-down"></span>
+                    </div>
+                    <div class="selectinbox" id="profilebtn-selbox">
+                        <div class="item">
+                            <span class="fa fa-fw fa-user mr-1"></span> Profilim
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-file-text mr-1"></span> Raporlarım
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-book mr-1"></span> Notlarım
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-grav mr-1"></span> Temalar
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-cog mr-1"></span> Ayarlarım
+                        </div>
+                    </div>
+                </a>
+                <a href="" id="messangebtn">
+                    <b class="fa fa-fw fa-envelope-o">
+                        <span class="count">+9</span>
+                    </b>
+                    <div class="text"><small>Mesajlarım</small></div>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="messangebtngrps-selbox">
+                        <div class="item">
+                            <h5>Mesaj 5</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Mesaj 4</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Mesaj 3</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Mesaj 2</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Mesaj 1</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" id="notifybtn">
+                    <b class="fa fa-fw fa-bell-o">
+                        <span class="count">+9</span>
+                    </b>
+                    <div class="text"><small>Bildirimlerim</small></div>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="notifybtngrps-selbox">
+                        <div class="item">
+                            <h5>Sistem Bildirimi 5</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Sistem Bildirimi 4</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Sistem Bildirimi 3</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Sistem Bildirimi 2</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <h5>Sistem Bildirimi 1</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a id="langbtngrps">
+                    <b class="flag-icon flag-icon-background "></b>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="langbtngrps-selbox">
+                        <div class="item" data-langtype="de">
+                            <span class="flag-icon flag-icon-background flag-icon-de"></span> Almanca
+                        </div>
+                        <div class="item" data-langtype="ar">
+                            <span class="flag-icon flag-icon-background flag-icon-ar"></span> Arapça
+                        </div>
+                        <div class="item" data-langtype="tr">
+                            <span class="flag-icon flag-icon-background flag-icon-tr"></span> Türkçe
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="nawbox">
+            <ul>
+                <li class='active'><a href=''>Ana Sayfa</a></li>
+                <li class='#'><a href=''>Ödevlerim</a></li>
+
+            </ul>
+        </div>
+        <div class="mainbox">
+            <div class="container-fluid">
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header row">
+                                <div class="card-title col-8">
+                                    <h5><i class="fa fa-fw fa-pencil"></i>Ödevlerim</h5>
+                                </div>
+                                <div class="card-element col-4">
+                                    <a href="" id="cardofbtn2"><i class="fa fa-fw fa-plus"></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body test-body row">
+                                <div class="card-body-content col-12">
+                                    <div class="row p-2">
+                                        <div class="col-12 p-2 mb-2">
+                                            <h5>Ödevlerini gerekli filtrelemeler yardımı ile bulup erişebilirsiniz.</h5>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 p-2">
+                                            <div class="testSlct">
+                                                <select class="w-100" name="slct" id="testSlctID">
+                                                    <option selected disabled>Ders Seçin</option>
+                                                    <option value="0">Tümü</option>
+                                                    <option value="1">Türkçe</option>
+                                                    <option value="2">Matematik</option>
+                                                    <option value="3">Fen!</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 tabOdevCozum resetPM">
+                                        <div class="row resetPM">
+                                            <div id="tabOdevCozumBtn-negative" class="col-6 resetPM w-100">Yapmadığım Ödevler</div>
+                                            <div id="tabOdevCozumBtn-positive" class="col-6 resetPM w-100"> Yaptığım Ödevler</div>
+                                        </div>
+                                    </div>
+                                    <div class="row p-2">
+                                        <a class="odev-wg-card-a col-lg-12 col-md-12 col-sm-12 p-4" target="positive" href="#">
+                                            <div class="row odev-wg-card">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content p-4">
+                                                    <p class="odev-title" >Değişen Dünya Dengeleri Karşısında Osmanlı Siyaseti (1595- 1774)</p>
+                                                    <p class="odev-explanation"><b>Açıklama:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit commodi temporibus aliquam ipsam nobis obcaecati, harum, nemo accusantium molestias tenetur quas eius distinctio ut nam, consequatur incidunt dicta cumque reprehenderit.</p>
+                                                    <p class="odev-control" style="color: green !important;">Çözüldü</p>
+                                                    <p class="odev-control" style="color: rgb(97, 97, 97) !important;">Durum: Pasif</p>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content2" >
+                                                    <p class="odev-qstn-count"><b>Öğretmen Adı: </b> Fatma Gürbüz</p>
+                                                    <p class="odev-qstn-count"><b>Ödev Türü:</b> Test</p>
+                                                    <p class="odev-qstn-count"><b>Başlangış Tarihi:</b> 14.01.2021 18:00</p>
+                                                    <p class="odev-qstn-count"><b>Bitis Tarihi:</b> 15.01.2021 18:00</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="odev-wg-card-a col-lg-12 col-md-12 col-sm-12 p-4" target="negative" href="#">
+                                            <div class="row odev-wg-card">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content p-4">
+                                                    <p class="odev-title" >Değişen Dünya Dengeleri Karşısında Osmanlı Siyaseti (1595- 1774)</p>
+                                                    <p class="odev-explanation"><b>Açıklama:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit commodi temporibus aliquam ipsam nobis obcaecati, harum, nemo accusantium molestias tenetur quas eius distinctio ut nam, consequatur incidunt dicta cumque reprehenderit.</p>
+                                                    <p class="odev-control" style="color: red !important;">Çözülmedi</p>
+                                                    <p class="odev-control" style="color:green !important;">Durum: Aktif</p>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content2" >
+                                                    <p class="odev-qstn-count"><b>Öğretmen Adı: </b> Fatma Gürbüz</p>
+                                                    <p class="odev-qstn-count"><b>Ödev Türü:</b> Test</p>
+                                                    <p class="odev-qstn-count"><b>Başlangış Tarihi:</b> 14.01.2021 18:00</p>
+                                                    <p class="odev-qstn-count"><b>Bitis Tarihi:</b> 15.01.2021 18:00</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="odev-wg-card-a col-lg-12 col-md-12 col-sm-12 p-4" target="positive" href="#">
+                                            <div class="row odev-wg-card">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content p-4">
+                                                    <p class="odev-title" >Değişen Dünya Dengeleri Karşısında Osmanlı Siyaseti (1595- 1774)</p>
+                                                    <p class="odev-explanation"><b>Açıklama:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit commodi temporibus aliquam ipsam nobis obcaecati, harum, nemo accusantium molestias tenetur quas eius distinctio ut nam, consequatur incidunt dicta cumque reprehenderit.</p>
+                                                    <p class="odev-control" style="color: green !important;">Çözüldü</p>
+                                                    <p class="odev-control" style="color: rgb(97, 97, 97) !important;">Durum: Pasif</p>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content2" >
+                                                    <p class="odev-qstn-count"><b>Öğretmen Adı: </b> Fatma Gürbüz</p>
+                                                    <p class="odev-qstn-count"><b>Ödev Türü:</b> Test</p>
+                                                    <p class="odev-qstn-count"><b>Başlangış Tarihi:</b> 14.01.2021 18:00</p>
+                                                    <p class="odev-qstn-count"><b>Bitis Tarihi:</b> 15.01.2021 18:00</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="odev-wg-card-a col-lg-12 col-md-12 col-sm-12 p-4" target="positive" href="#">
+                                            <div class="row odev-wg-card">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content p-4">
+                                                    <p class="odev-title" >Değişen Dünya Dengeleri Karşısında Osmanlı Siyaseti (1595- 1774)</p>
+                                                    <p class="odev-explanation"><b>Açıklama:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit commodi temporibus aliquam ipsam nobis obcaecati, harum, nemo accusantium molestias tenetur quas eius distinctio ut nam, consequatur incidunt dicta cumque reprehenderit.</p>
+                                                    <p class="odev-control" style="color: green !important;">Çözüldü</p>
+                                                    <p class="odev-control" style="color: rgb(97, 97, 97) !important;">Durum: Pasif</p>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content2" >
+                                                    <p class="odev-qstn-count"><b>Öğretmen Adı: </b> Fatma Gürbüz</p>
+                                                    <p class="odev-qstn-count"><b>Ödev Türü:</b> Test</p>
+                                                    <p class="odev-qstn-count"><b>Başlangış Tarihi:</b> 14.01.2021 18:00</p>
+                                                    <p class="odev-qstn-count"><b>Bitis Tarihi:</b> 15.01.2021 18:00</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="odev-wg-card-a col-lg-12 col-md-12 col-sm-12 p-4" target="positive" href="#">
+                                            <div class="row odev-wg-card">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content p-4">
+                                                    <p class="odev-title" >Değişen Dünya Dengeleri Karşısında Osmanlı Siyaseti (1595- 1774)</p>
+                                                    <p class="odev-explanation"><b>Açıklama:</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit commodi temporibus aliquam ipsam nobis obcaecati, harum, nemo accusantium molestias tenetur quas eius distinctio ut nam, consequatur incidunt dicta cumque reprehenderit.</p>
+                                                    <p class="odev-control" style="color: green !important;">Çözüldü</p>
+                                                    <p class="odev-control" style="color: rgb(97, 97, 97) !important;">Durum: Pasif</p>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 odev-wg-content2" >
+                                                    <p class="odev-qstn-count"><b>Öğretmen Adı: </b> Fatma Gürbüz</p>
+                                                    <p class="odev-qstn-count"><b>Ödev Türü:</b> Test</p>
+                                                    <p class="odev-qstn-count"><b>Başlangış Tarihi:</b> 14.01.2021 18:00</p>
+                                                    <p class="odev-qstn-count"><b>Bitis Tarihi:</b> 15.01.2021 18:00</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                       
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    </section>
+    <style type="text/css">
+
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="tr_TR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2youTech LMS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-uripath="" data-lang="ru">
+    <section class="sidebox">
+        <a class="logobox"  href=""></a>
+        <div class="menubox">
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href='index.html'><i class="fa fa-fw fa-home mr-1"></i> <div> Ana Sayfa </div></a></li>
+                    <li class="has-sub"><a href=""><i class="fa fa-fw fa-graduation-cap mr-1"></i><div> Derslerim</div></a>
+                        <ul>
+                            <li><a href="view/yazili-derslerim.html">Yazılı Derslerim</a></li>
+                            <li><a href="view/yazili-derslerim.html">Videolu Derslerim</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='#'><i class="fa fa-fw fa-pencil-square mr-1"></i><div> Etütlerim</div></a></li>
+                    <li><a href='view/odevlerim.html'><i class="fa fa-fw fa-eye mr-1"></i><div> Ödevlerim</div></a></li>
+                    <li><a href='view/testlerim.html'><i class="fa fa-fw fa-pencil mr-1"></i><div> Testlerim</div></a></li>
+                    <li class='has-sub'><a href='#'><i class="fa fa-fw fa-bars mr-1"></i> <div> Deneme Sınavları</div></a>
+                        <ul>
+                            <li><a href="view/deneme-sinavi.html"> Tanımlı Sınavlarım</a></li>
+                            <li><a href=""> Deneme Havuzu</a></li>
+                            <li><a href=""> Sonuçlarım</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='view/soru.html'><i class="fa fa-fw fa-file-text mr-1"></i><div > Online Sınavlarım</div></a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-book mr-1"></i><div> Çıkmış Sorular</div></a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-drivers-license mr-1"></i><div> Online Kütüphane</div></a></li>
+                    <li><a href='view/favori-sorular.html'><i class="fa fa-fw fa-flag mr-1"></i><div> Favori Sorular</div></a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-users mr-1"></i><div> Kulüplerim</div></a></li>
+                    <li><a href='#'><i class="fa fa-fw fa-user-plus mr-1"></i><div> Online Rehberlik</div></a></li>
+                    <li><a href='view/oyunlar.html'><i class="fa fa-fw fa-gamepad mr-1"></i><div> Oyunlar</div></a></li>
+                    <li><a href='view/cnf.html'><i class="fa fa-fw fa-video-camera mr-1"></i><div> Örnek Konferans</div></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="contentbox">
+        <div class="titleBox">
+            <a href="" id="menubtn"><b class="fa fa-fw fa-bars"></b></a>
+            <div class="mr-2" id="groupbtnbox">
+                <a href="" id="logoutbtn"><b class="fa fa-power-off"></b></a>
+                <a href="" id="profilebtn">
+                    <img class="" src="data:image/png;base64,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" alt="">
+                    <div class="text">
+                        <b>Öğrenci İsmi</b>
+                        <small>11-A Sınıfı</small>
+                    </div>
+                    <div class="toogles">
+                        <span class="fa fw fa-angle-down"></span>
+                    </div>
+                    <div class="selectinbox" id="profilebtn-selbox">
+                        <div class="item" id="profilim">
+                            <span class="fa fa-fw fa-user mr-1"></span> Profilim
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-file-text mr-1"></span> Raporlarım
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-book mr-1"></span> Notlarım
+                        </div>
+                        <div class="item" id="temalar">
+                            <span class="fa fa-fw fa-grav mr-1"></span> Temalar
+                        </div>
+                        <div class="item">
+                            <span class="fa fa-fw fa-cog mr-1"></span> Ayarlarım
+                        </div>
+                    </div>
+                </a>
+                <a href="" id="messangebtn">
+                    <b class="fa fa-fw fa-envelope-o">
+                        <span class="count">+9</span>
+                    </b>
+                    <div class="text"><small>Mesajlarım</small></div>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="messangebtngrps-selbox">
+                        <div class="item" >
+                            <h5>Mesaj 5</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Mesaj 4</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Mesaj 3</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Mesaj 2</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Mesaj 1</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="" id="notifybtn">
+                    <b class="fa fa-fw fa-bell-o">
+                        <span class="count">+9</span>
+                    </b>
+                    <div class="text"><small>Bildirimlerim</small></div>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="notifybtngrps-selbox">
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 5</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 4</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 3</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 2</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <h5>Sistem Bildirimi 1</h5>
+                            <div>
+                                <p>12.06.1998 06:07</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a id="langbtngrps">
+                    <b class="flag-icon flag-icon-background "></b>
+                    <div class="toogles"><span class="fa fw fa-angle-down"></span></div>
+                    <div class="selectinbox" id="langbtngrps-selbox">
+                        <div class="item" data-langtype="de">
+                            <span class="flag-icon flag-icon-background flag-icon-de"></span> Almanca
+                        </div>
+                        <div class="item" data-langtype="ar">
+                            <span class="flag-icon flag-icon-background flag-icon-ar"></span> Arapça
+                        </div>
+                        <div class="item" data-langtype="tr">
+                            <span class="flag-icon flag-icon-background flag-icon-tr"></span> Türkçe
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="nawbox">
+            <ul>
+                <li class='active'><a href=''>Ana Sayfa</a></li>
+            </ul>
+        </div>
+        <div class="mainbox">
+            <div class="container-fluid">
+                <div class="row p-2">
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-4">
+                        <div class="row bg-white box-shadow">
+                        <div class="col-8 text-left p-4" style="float: left;">
+                            <h4 style="color: rgb(128, 0, 60);">0 Adet</h4>
+                            <p class="mt-1">Ders İçeriği</p>
+                        </div>
+                        <div class="col-4 text-right pl-1" style="float: right;">
+                            <i class="fa fa-fw fa-graduation-cap mt-4 p-2 mr-2" style="font-size: 40px; color: rgb(128, 0, 60);"></i>
+                        </div>
+                    </div></div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-4"><div class="row bg-white box-shadow">
+                        <div class="col-8 text-left p-4" style="float: left;">
+                            <h4 style="color: rgb(0, 128, 75);">0 Adet</h4>
+                            <p class="mt-1"> Aktif Sınav</p>
+                        </div>
+                        <div class="col-4 text-right pl-1" style="float: right;">
+                            <i class="fa fa-fw fa-file-text mt-4 p-2 mr-2" style="font-size: 40px; color: rgb(0, 128, 75);"></i>
+                        </div>
+                    </div></div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-4"><div class="row bg-white box-shadow">
+                        <div class="col-8 text-left p-4" style="float: left;">
+                            <h4 style="color: rgb(128, 73, 0);">0 Adet</h4>
+                            <p class="mt-1">Deneme Sınavı</p>
+                        </div>
+                        <div class="col-4 text-right pl-1" style="float: right;">
+                            <i class="fa fa-fw fa-bars mt-4 p-2 mr-2" style="font-size: 40px; color: rgb(128, 73, 0);"></i>
+                        </div>
+                    </div></div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 p-4"><div class="row bg-white box-shadow">
+                        <div class="col-8 text-left p-4" style="float: left;">
+                            <h4 style="color: rgb(0, 81, 128);">0 Adet</h4>
+                            <p class="mt-1">Favori Soru</p>
+                        </div>
+                        <div class="col-4 text-right pl-1" style="float: right;">
+                            <i class="fa fa-fw fa-flag mt-4 p-2 mr-2" style="font-size: 40px; color: rgb(0, 81, 128);"></i>
+                        </div>
+                    </div></div>
+                </div>
+                <div class="row p-4">
+                    <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                        <div class="card">
+                            <div class="card-header row">
+                                <div class="card-title col-8">
+                                    <h5><i class="fa fa-fw fa-graduation-cap"></i>Günün Ders Programı</h5>
+                                </div>
+                                <div class="card-element col-4" >
+                                    <a href="" id="cardofbtn1"><i class="fa fa-fw fa-plus" ></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body gunlukprogramwg-body row">
+                                <div class="card-body-content col-12">
+                                    <div id="dersprogramibox" class="card-body collapse in" aria-expanded="true" style=""><div class="derprogramibox">
+                                        <div class="dersbox-col daily"><div class="titlebox"><b>SALI</b></div><a href="cnf.html" class="dersoff actives">
+                                        <b>MATEMATİK-1</b>
+                                        <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                        <span><i class="fa fa-fw fa-clock-o"></i> 09:15:00 / 09:45:00</span>
+                                    </a><a class="dersoff">
+                                        <b>MATEMATİK-2</b>
+                                        <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                        <span><i class="fa fa-fw fa-clock-o"></i> 10:00:00 / 10:30:00</span>
+                                    </a><a class="dersoff">
+                                        <b>GEOMETRİ</b>
+                                        <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                        <span><i class="fa fa-fw fa-clock-o"></i> 10:45:00 / 11:15:00</span>
+                                    </a><a class="dersoff">
+                                        <b>FİZİK-1</b>
+                                        <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                        <span><i class="fa fa-fw fa-clock-o"></i> 11:30:00 / 12:00:00</span>
+                                    </a><a class="dersoff">
+                                        <b>MATEMATİK-1</b>
+                                        <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                        <span><i class="fa fa-fw fa-clock-o"></i> 12:15:00 / 12:45:00</span>
+                                    </a><a class="dersoff">
+                                        <b>ETÜT</b>
+                                        <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                        <span><i class="fa fa-fw fa-clock-o"></i> 13:45:00 / 14:15:00</span>
+                                    </a><a class="dersoff">
+                                        <b>BİYOLOJİ-1</b>
+                                        <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                        <span><i class="fa fa-fw fa-clock-o"></i> 14:30:00 / 15:00:00</span>
+                                    </a><a class="dersoff">
+                                        <b>BİYOLOJİ-1</b>
+                                        <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                        <span><i class="fa fa-fw fa-clock-o"></i> 15:15:00 / 15:45:00</span>
+                                    </a><a class="dersoff">
+                                        <b>GEOMETRİ</b>
+                                        <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                        <span><i class="fa fa-fw fa-clock-o"></i> 16:00:00 / 16:30:00</span>
+                                    </a>
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-lg-8 col-md-6 col-sm-12 p-2">
+                        <div class="card">
+                            <div class="card-header row">
+                                <div class="card-title col-8">
+                                    <h5><i class="fa fa-fw fa-graduation-cap"></i>Ödev</h5>
+                                </div>
+                                <div class="card-element col-4" >
+                                    <a href="" id="cardofbtn2"><i class="fa fa-fw fa-plus" ></i></a>
+                                </div>
+                            </div>
+                            <div class="card-body odevwg-body row">
+                                <div class="card-body-content text-center col-12">
+                                    <br> <br> <br> <br> 
+                                    <p>Henüz Ödev Bulunmamakta.</p>
+                                    <br> <br> <br> <br> 
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div> 
+                <div class="row p-4">
+                    <div class="col-lg-12 p-2"  style="padding-left: 0px; padding-right: 0px;">
+                            <div class="card">
+                                <div class="card-header row">
+                                    <div class="card-title col-8">
+                                        <h5><i class="fa fa-fw fa-graduation-cap"></i>Haftanın Ders Programı</h5>
+                                    </div>
+                                    <div class="card-element col-4" >
+                                        <a href="" id="cardofbtn3"><i class="fa fa-fw fa-plus" ></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-body haftalikprogramwg-body row">
+                                    <div class="card-body-content col-12">
+                                        <div id="dersprogramibox" class="card-body collapse in" aria-expanded="true" style=""><div class="derprogramibox"><div class="dersbox-col"><div class="titlebox"><b>Pazartesi</b></div><a class="dersoff">
+                                            <b>MATEMATİK-1</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 09:15:00 / 09:45:00</span>
+                                            </a><a class="dersoff">
+                                                <b>MATEMATİK-2</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 10:00:00 / 10:30:00</span>
+                                            </a><a class="dersoff">
+                                                <b>GEOMETRİ</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 10:45:00 / 11:15:00</span>
+                                            </a><a class="dersoff">
+                                                <b>FİZİK-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 11:30:00 / 12:00:00</span>
+                                            </a><a class="dersoff">
+                                                <b>MATEMATİK-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 12:15:00 / 12:45:00</span>
+                                            </a><a class="dersoff">
+                                                <b>ETÜT</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 13:45:00 / 14:15:00</span>
+                                            </a><a class="dersoff">
+                                                <b>BİYOLOJİ-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 14:30:00 / 15:00:00</span>
+                                            </a><a class="dersoff">
+                                                <b>BİYOLOJİ-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 15:15:00 / 15:45:00</span>
+                                            </a><a class="dersoff">
+                                                <b>GEOMETRİ</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 16:00:00 / 16:30:00</span>
+                                            </a></div><div class="dersbox-col"><div class="titlebox"><b>Salı</b></div><a class="dersoff">
+                                                <b>MATEMATİK-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 09:15:00 / 09:45:00</span>
+                                            </a><a class="dersoff">
+                                                <b>MATEMATİK-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 10:00:00 / 10:30:00</span>
+                                            </a><a class="dersoff">
+                                                <b>KİMYA-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 10:45:00 / 11:15:00</span>
+                                            </a><a class="dersoff">
+                                                <b>KİMYA-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 11:30:00 / 12:00:00</span>
+                                            </a><a class="dersoff">
+                                                <b>MATEMATİK-2</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 12:15:00 / 12:45:00</span>
+                                            </a><a class="dersoff">
+                                                <b>BİYOLOJİ-2</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 13:45:00 / 14:15:00</span>
+                                            </a><a class="dersoff">
+                                                <b>MATEMATİK-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 14:30:00 / 15:00:00</span>
+                                            </a><a class="dersoff">
+                                                <b>GEOMETRİ</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 15:15:00 / 15:45:00</span>
+                                            </a><a class="dersoff">
+                                            <b>MATEMATİK-2</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 16:00:00 / 16:30:00</span>
+                                        </a></div>
+                                        <div class="dersbox-col"><div class="titlebox"><b>Çarşamba</b></div>
+                                        <a class="dersoff">
+                                            <b>KİMYA-1</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 09:15:00 / 09:45:00</span>
+                                            </a>
+                                        <a class="dersoff">
+                                            <b>KİMYA-1</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 10:00:00 / 10:30:00</span>
+                                        </a>
+                                        <a class="dersoff">
+                                            <b>DİL ANLATIM </b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 10:45:00 / 11:15:00</span>
+                                        </a>
+                                        <a class="dersoff">
+                                            <b>BİYOLOJİ-2</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 11:30:00 / 12:00:00</span>
+                                        </a>
+                                        <a class="dersoff">
+                                            <b>FİZİK 2</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 12:15:00 / 12:45:00</span>
+                                        </a>
+                                        <a class="dersoff">
+                                            <b>DİL ANLATIM </b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 13:45:00 / 14:15:00</span>
+                                        </a>
+                                        <a class="dersoff">
+                                            <b>ETÜT</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 14:30:00 / 15:00:00</span>
+                                        </a>
+                                        <a class="dersoff">
+                                            <b>MATEMATİK-2</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 15:15:00 / 15:45:00</span>
+                                        </a>
+                                        <a class="dersoff">
+                                            <b>MATEMATİK-2</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 16:00:00 / 16:30:00</span>
+                                        </a>
+                                            </div>
+                                            <div class="dersbox-col"><div class="titlebox"><b>Perşembe</b></div>
+                                            <a class="dersoff">
+                                                <b>KİMYA-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 09:15:00 / 09:45:00</span>
+                                                </a>
+                                            <a class="dersoff">
+                                                <b>KİMYA-1</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 10:00:00 / 10:30:00</span>
+                                            </a>
+                                            <a class="dersoff">
+                                                <b>DİL ANLATIM </b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 10:45:00 / 11:15:00</span>
+                                            </a>
+                                            <a class="dersoff">
+                                                <b>BİYOLOJİ-2</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 11:30:00 / 12:00:00</span>
+                                            </a>
+                                            <a class="dersoff">
+                                                <b>FİZİK 2</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 12:15:00 / 12:45:00</span>
+                                            </a>
+                                            <a class="dersoff">
+                                                <b>DİL ANLATIM </b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 13:45:00 / 14:15:00</span>
+                                            </a>
+                                            <a class="dersoff">
+                                                <b>ETÜT</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 14:30:00 / 15:00:00</span>
+                                            </a>
+                                            <a class="dersoff">
+                                                <b>MATEMATİK-2</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 15:15:00 / 15:45:00</span>
+                                            </a>
+                                            <a class="dersoff">
+                                                <b>MATEMATİK-2</b>
+                                                <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                                <span><i class="fa fa-fw fa-clock-o"></i> 16:00:00 / 16:30:00</span>
+                                            </a>
+                                            </div>
+                                            <div class="dersbox-col"><div class="titlebox"><b>Cuma</b></div><a class="dersoff">
+                                            <b>MATEMATİK-1</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 09:15:00 / 09:45:00</span>
+                                            </a>
+                                            <a class="dersoff">
+                                            <b>KİMYA-1</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 10:00:00 / 10:30:00</span>
+                                        </a><a class="dersoff">
+                                            <b>KOÇLUK 11 A</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 10:45:00 / 11:15:00</span>
+                                        </a><a class="dersoff">
+                                            <b>KOÇLUK 11 A</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 11:30:00 / 12:00:00</span>
+                                        </a><a class="dersoff">
+                                            <b>FİZİK-1</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 12:15:00 / 12:45:00</span>
+                                        </a><a class="dersoff">
+                                            <b>FİZİK-1</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 13:45:00 / 14:15:00</span>
+                                        </a><a class="dersoff">
+                                            <b>BİYOLOJİ-1</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 14:30:00 / 15:00:00</span>
+                                        </a><a class="dersoff">
+                                            <b>MATEMATİK-2</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 15:15:00 / 15:45:00</span>
+                                        </a><a class="dersoff">
+                                            <b>KİMYA-1</b>
+                                            <span><i class="fa fa-fw fa-user"></i> İSİM</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i> 16:00:00 / 16:30:00</span>
+                                        </a></div>
+                                        <div class="dersbox-col"><div class="titlebox"><b>Cumartesi</b></div></div></div></div>
+                                    </div>
+                                    </div>
+                            </div>
+                    </div> 
+                </div>
+            </div>            
+        </div>  
+    </div>         
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.iife.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
